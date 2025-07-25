@@ -1,18 +1,24 @@
 <div class="container">
+
+  <div class="heading">
+    <h2 class="h1">PRE-REGISTRATION</h2>
+    <div class="heading_icon_group">
+      <button class="icon_button"><i class="fa-regular fa-bell "></i></button>
+      <button class="icon_button"><i class="fa-regular fa-user"></i></button>
+    </div>
+  </div>
+
   <div class="wrapper">
-    <div class="heading">
-      <h2 class="h1">PRE-REGISTRATION</h2>
-      <div class="heading_icon_group">
-        <button class="icon_button"><i class="fa-regular fa-bell "></i></button>
-        <button class="icon_button"><i class="fa-regular fa-user"></i></button>
-      </div>
+
+    <div class="stepper-card">
+      
     </div>
 
     <div class="card">
       <div class="form_card">
         <form action="/upload" method="POST" enctype="multipart/form-data">
 
-          <h2>Host Details</h2>
+          <h3>Host Details</h3>
 
           <div class="input_card">
             <label for="organization">Organization</label>
@@ -30,7 +36,7 @@
             </select>
           </div>
 
-          <h2>Visitor Details</h2>
+          <h3>Visitor Details</h3>
 
           <div class="input_card">
             <label for="visitorId">Visitor ID</label>
@@ -133,10 +139,6 @@
             </select>
           </div>
 
-          <div class="input_card">
-            <label for="hostProfile">Host Profile </label>
-            <input type="text" placeholder=" Enter host profile" class="bottom_border">
-          </div>
 
           <div class="upload_input_card">
             <div class="upload_card">
@@ -149,6 +151,28 @@
                 {{fileName}}
               </div>
             </div>
+          </div>
+
+          <h3>Vehicle Details</h3><br>
+
+          <div class="input_card">
+            <label for="vehileRegistrationNo">Vehicle Registration No.</label>
+            <input class="bottom_border" type="text" id="vehicleRegistrationNo" name="vehicleRegistrationNo"
+              placeholder="Enter Vehicle No." required>
+          </div>
+          <div class="input_card">
+            <label for="vehicleType">Vehicle Type</label>
+            <select id="vehicleType" name="vehicleType" class="bottom_border">
+              <option value="bike">Bike</option>
+              <option value="car">Car</option>
+              <option value="bus">Bus</option>
+            </select>
+          </div>
+
+          <div class="input_card">
+            <label for="description">Description</label>
+            <input class="bottom_border" type="text" id="description" name="description" placeholder="Enter Description"
+              required>
           </div>
         </form>
 
@@ -164,12 +188,10 @@
 
       </div>
     </div>
-
-  </div>
-
-   <!--visitor companion-->
+    <!--visitor companion-->
+    <div class="companion_wrapper">
       <div class="companion">
-        <h4>Visitor Companion</h4>
+        <h3>Visitor Companion</h3>
 
         <!--Hidden input boxes-->
 
@@ -177,17 +199,29 @@
         <button (click)="onAddClick()" type="submit" class="add_cmpn_btn"><i class="fa-solid fa-plus fa-xl"
             style="color: #000000;"></i></button>
 
-            <!--Adding visitor companion-->
+        <!--Adding visitor companion-->
+      </div>
 
-      <div *ngFor="let group of inputGroups; let i = index" class="input-group">
+      <div *ngFor="let group of inputGroups; let i = index" class="input_group">
         <h4>Companion {{i+1}}</h4>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Mobile Number" />
-        <input type="text" placeholder="Gender" />
+        <input type="text" class="cmpn_input_card" placeholder="Name" />
+        <input type="email" class="cmpn_input_card" placeholder="Email" />
+        <input type="text" class="cmpn_input_card" placeholder="Mobile Number" />
+        <select id="gender" name="gender" class="cmpn_input_card">
+          <option value="" disbled selected>gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <button (click)="onDeleteClick(i)" class="cmpn-delete-btn"><i class="fa-solid fa-trash-can"
+            style="color: #fe2020;"></i></button>
       </div>
-      </div>
-      
+    </div>
+    <div class="last_button_div">
+      <button type="submit" class="last_button"> Save & Continue</button>
+      <button type="submit" class="last_button"> Discard</button>
+
 
     </div>
-  
+  </div>
+</div>

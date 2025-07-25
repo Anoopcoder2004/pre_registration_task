@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -28,4 +28,9 @@ export class AppComponent {
   onAddClick(){
     this.inputGroups.push(this.inputGroups.length);
   }
+  
+  onDeleteClick(index: number){
+    this.inputGroups.splice(index,1);
+  }
+
 }
