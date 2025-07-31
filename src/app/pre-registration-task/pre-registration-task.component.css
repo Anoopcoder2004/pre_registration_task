@@ -1,0 +1,446 @@
+/* Stepper wrapper to center the whole stepper */
+.stepper-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  width:100%;
+}
+/* Center the stepper container */
+
+
+/* Align step headers vertically */
+::ng-deep .mat-horizontal-stepper-header-container {
+  align-items: center !important;
+  justify-content: center !important;
+  width: 60% !important;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+/* Make step content vertical: icon above, text below */
+::ng-deep .mat-horizontal-stepper-header {
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+/* Remove unnecessary margin under icons */
+::ng-deep .mat-step-icon {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 32px !important;
+  width: 32px !important;
+  line-height: 32px !important; /* centers the number inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Style for step labels */
+
+::ng-deep .mat-horizontal-stepper-header label {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
+
+
+/* Align the step connector line properly */
+::ng-deep .mat-stepper-horizontal-line {
+  top: 50% !important; /* middle of the 32px icon */
+  transform: translateY(-50%) !important;
+  border-top: 3px solid #008000 !important;
+  padding:0;
+  margin: 0 !important;;
+  padding-top: 24px;
+}
+
+/* Completed, active, and inactive icon colors */
+::ng-deep .mat-step-icon {
+  background-color: #008000 !important;
+  color: white !important;
+  margin: 0 !important;
+  line-height: 32px !important;
+}
+::ng-deep .mat-step-icon.mat-step-icon-selected {
+  background-color: #008000 !important;
+}
+::ng-deep .mat-step-icon.mat-step-icon-state-done {
+  background-color: #008000 !important;
+}
+::ng-deep .mat-step-label {
+  color: #008000 !important; /* Replace with your desired color */
+  font-weight: 600;
+}
+
+
+
+.body{
+
+    font-family:sans-serif;
+}
+
+
+
+.stepper-header {
+  margin-bottom: 20px;
+  background: white;
+  border-bottom: 2px solid #00B894; /* Green line like in your screenshot */
+}
+
+.mat-horizontal-stepper-header {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container{
+    background: rgb(248, 246, 243);
+    padding-bottom: 20px;
+}
+.h1{
+    display:inline;
+    font-size: xx-large;
+
+}
+
+.heading{
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.heading_icon_group{
+    display:flex;
+    gap:10px;
+}
+
+.stepper-card{
+    border-bottom:3px solid #39ffbd;
+    height:150px;
+}
+
+.wrapper{
+    width:80%;
+    border-radius: 5px;
+    justify-content: center;
+        margin: 0 auto;
+    background: white;
+
+}
+.card{
+    display:flex;
+}
+.form_card{
+    
+  
+    width: 75%;
+    margin:0 auto;
+    padding:40px;
+
+}
+
+.image_card{
+    width:25%;
+    margin-bottom:20px;
+
+}
+
+.image_wrapper{
+    display:flex;
+    width:100px;
+  
+    margin-top: 350px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+
+}
+
+.image_wrapper img{
+
+    width: 100%;
+    object-fit: cover;
+}
+.input_card{
+    display: inline-block;
+    min-width:30%;
+    margin-right: 10px;
+    margin-bottom: 30px;
+
+
+}
+
+
+.bottom_border{
+    border:none;
+    outline:none;
+    width:80%;
+    border-bottom:1px solid black;
+
+}
+
+.button{
+    border:1px solid gray;
+    border-radius: 5px;
+   
+    padding: 3px;
+    margin: 3px;
+    background: white;
+}
+.button:hover{
+  color:white;
+  background:lightgreen;
+}
+
+.icon_button{
+    border:none;
+    font-size: medium;
+    margin-left:17px;
+    background:rgb(248, 246, 243)
+}
+label{
+    display:block;
+    margin-right:20px;
+    margin-bottom:15px;
+    
+}
+
+.upload_card{
+    display:flex;
+    gap:60px;
+    padding-top: 7px;
+}
+
+.upload_input_card{
+    display: inline-block;
+    min-width:60%;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.upload_button{
+    border:1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    width:41%;
+    background: white;
+}
+
+.upload_button:hover{
+    background-color:green;
+    color:white;
+}
+
+.companion{
+    display:flex;
+    width:93%;
+    margin:0 auto;
+    background-color: white;
+}
+.add_cmpn_btn{
+    border:none;
+    margin-left:10px;
+    border-radius: 5px;
+
+    font-size:15px;
+    background-color: #f4f8e0;
+
+
+}
+
+.cmpn_details{
+    width:80%;
+    margin:0 auto;
+    background-color: white;
+}
+
+.cmpn_form{
+    background: white;
+    width: 75%;
+    margin:0 auto;
+    border-radius: 20px;
+
+}
+.cmpn_input_card{
+    display: inline-block;
+    min-width:20%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+
+}
+.input_group {
+    display:block;
+    width: 93%;
+    margin:0 auto;
+
+}
+.companion_wrapper{
+    display:block;
+    margin:0 auto;
+    background-color: white;
+    margin-bottom:40px;
+}
+.cmpn-delete-btn{
+    border:none;
+    background-color:white;
+}
+
+.last_button{
+      border:none;
+      font-size: medium;
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+    background: lightgreen;
+}
+
+.last_button:hover{
+    background:green;
+    color:white;
+}
+
+.last_button_div{
+    width:93%;
+    background:white;
+    margin:0 auto;
+    margin-top:20px;
+    padding-bottom:15px;
+    display:flex;
+    gap:30px;
+}
+
+.vehicle-details{
+    width:93%;
+    display:flex;
+    gap:10px;
+    border:none;
+    outline:none;
+    border-bottom:1px;
+    
+}
+
+.vdcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    width: 80%;
+    
+  
+}
+
+.vdcard{
+    display:flex;
+    width:20%;
+    flex-direction:column;
+    margin-right:30px;
+    font-size:small;
+    margin-bottom:30px;
+    
+
+}
+
+.bottom-border{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+}
+
+.butn-container{
+width:80%;
+margin:0 auto;
+display:flex;
+}
+
+.butn-card{
+    margin-right:30px;
+    width:20%;
+    border-radius: 10px;
+    padding:5px;
+    color:black !important;
+    background-color: lightgreen !important;
+}
+
+.butn-card:hover{
+    background-color: green;
+    color:white !important;
+}
+.h3{
+ margin-bottom: 25px;
+ margin-left: 9.5%;
+}
+
+.recurrence-modal {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.field input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.butn-card {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.butn-card:hover {
+  opacity: 0.9;
+}
